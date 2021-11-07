@@ -24,10 +24,13 @@ public class MyNetworkPlayer : NetworkBehaviour
 
     }
 
+    #region Server
+
     [Server]
-    public void SetDisplayName(string newDisplayName)
+    public void SetDisplayName(string newPlayerName)
     {
-        playerName = newDisplayName;
+        playerName = newPlayerName;
+        
     }
 
     [Server]
@@ -36,7 +39,34 @@ public class MyNetworkPlayer : NetworkBehaviour
         playerColor = GenerateRandomColor(); ;
 
     }
+    
+    [Command]
+    void CmdSetDisplayName(string newPlayerName)
+    {
+        Debug.Log($"Player has requested to change their name to {newPlayerName} which is {newPlayerName.Length} characters long");
+        if (IsPlayerNameLongEnough(newPlayerName))
+        {
+            RpcLogNewPlayerName(newPlayerName);
+            SetDisplayName(newPlayerName);
+        }
+    }
 
+    bool IsPlayerNameLongEnough(string newPlayerName)
+    {
+        if (newPlayerName.Length >= 6)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    #endregion
+
+
+    #region Client
     Color GenerateRandomColor()
     {
         float red = Random.Range(0f, 1f);
@@ -57,4 +87,17 @@ public class MyNetworkPlayer : NetworkBehaviour
         playerColorRenderer.material.SetColor("_BaseColor", newColor);
     }
 
+    [ContextMenu("SetPlayerName")]
+    void SetMyName()
+    {
+        CmdSetDisplayName("Marku");
+    }
+
+    [ClientRpc]
+    void RpcLogNewPlayerName(string newPlayerName)
+    {
+        Debug.Log($"Server updated the player name to {newPlayerName}");
+    }
+
+    #endregion
 }
