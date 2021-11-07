@@ -7,7 +7,13 @@ public class MyNetworkManager : NetworkManager
 {
     public override void OnServerAddPlayer(NetworkConnection conn) {
         base.OnServerAddPlayer(conn);
-        Debug.Log("Player connected to server!");
-        Debug.Log($"Number of players: {numPlayers}");
+
+        // Identity is reference to the client which is connected.
+        MyNetworkPlayer player = conn.identity.GetComponent<MyNetworkPlayer>();
+
+        string playerName = $"Player {numPlayers}";
+
+        player.SetDisplayName(playerName);
+        player.SetRandomPlayerColor();
     }
 }
