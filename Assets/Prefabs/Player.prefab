@@ -448,6 +448,8 @@ GameObject:
   - component: {fileID: 4132338382343305525}
   - component: {fileID: 2740536338156883863}
   - component: {fileID: 4513586213628474168}
+  - component: {fileID: -221810128062478101}
+  - component: {fileID: 8545354168564165392}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -524,7 +526,7 @@ MonoBehaviour:
   clientAuthority: 0
   sendInterval: 0.05
   syncPosition: 1
-  syncRotation: 0
+  syncRotation: 1
   syncScale: 0
   interpolatePosition: 1
   interpolateRotation: 1
@@ -536,3 +538,39 @@ MonoBehaviour:
   showGizmos: 0
   showOverlay: 0
   overlayColor: {r: 0, g: 0, b: 0, a: 0.5}
+--- !u!114 &-221810128062478101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132338382343305527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f146bdaf904b74b4aa6e6e038f0008fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  syncMode: 0
+  syncInterval: 0.1
+--- !u!195 &8545354168564165392
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4132338382343305527}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

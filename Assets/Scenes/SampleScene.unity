@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 74166f57eb8323d48949816059a69ec0, type: 2}
 --- !u!1001 &71888768
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -133,6 +133,10 @@ PrefabInstance:
     - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_Name
       value: Wall_ (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4185999720441130497, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_RootOrder
@@ -243,6 +247,10 @@ PrefabInstance:
     - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_Name
       value: Wall_ (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4185999720441130497, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_RootOrder
@@ -427,7 +435,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1240482813
 Transform:
@@ -745,6 +753,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_ (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4185999720441130497, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -983,7 +999,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 7.83e-43, y: -75.22455, z: 7.83e-43, w: 0}
+  m_BoundingSphereOverride: {x: 0, y: 3.807e-41, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1011,6 +1027,10 @@ PrefabInstance:
     - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_Name
       value: Wall_
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185999720441130496, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4185999720441130497, guid: 78be982bb4bff124ea8d9c8354f6dbdb, type: 3}
       propertyPath: m_RootOrder
@@ -1065,10 +1085,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1417272719}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: sceneId
-      value: 2524883661
-      objectReference: {fileID: 0}
     - target: {fileID: 9103210517083498776, guid: b51a9553bf2c9b24d9eb408893f798c2, type: 3}
       propertyPath: m_Name
       value: Spawnpoint_Player
